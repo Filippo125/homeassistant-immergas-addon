@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Modbus Sniffer",
+        "description": "Configura l'acquisizione dei frame Modbus scegliendo tra modalità UDP o TCP.",
+        "data": {
+          "name": "Nome istanza",
+          "device_type": "Tipologia apparato",
+          "connection_mode": "Modalità connessione",
+          "source_host": "Host locale",
+          "udp_port": "Porta UDP",
+          "tcp_host": "Server TCP",
+          "tcp_port": "Porta TCP",
+          "include_defaults": "Crea sensori predefiniti"
+        }
+      }
+    },
+    "error": {
+      "required": "Compila questo campo.",
+      "invalid_device_type": "Tipologia di apparato non valida.",
+      "invalid_connection_mode": "Modalità di connessione non valida.",
+      "invalid_port": "Porta non valida.",
+      "invalid_sensor": "Controlla i valori inseriti per il sensore.",
+      "invalid_state_map": "Formato non valido: usa coppie chiave=valore separate da virgole.",
+      "invalid_precision": "Precisione non valida.",
+      "invalid_selection": "Selezione non valida.",
+      "no_sensors": "Nessun sensore configurato."
+    },
+    "abort": {
+      "already_configured": "Questo listener è già configurato."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Gestione sensori",
+        "description": "Sensori configurati: {sensor_count}",
+        "data": {
+          "action": "Azione"
+        }
+      },
+      "add": {
+        "title": "Aggiungi sensore",
+        "data": {
+          "name": "Nome",
+          "register": "Registro (esadecimale o decimale)",
+          "unit_id": "Unit ID (opzionale)",
+          "scale": "Scala",
+          "offset": "Offset",
+          "precision": "Precisione decimale",
+          "unit_of_measurement": "Unità di misura",
+          "device_class": "Device class",
+          "state_class": "State class",
+          "icon": "Icona",
+          "force_update": "Forza aggiornamento",
+          "state_map": "State map (chiave=valore)"
+        }
+      },
+      "remove": {
+        "title": "Rimuovi sensore",
+        "description": "Seleziona il sensore da eliminare.",
+        "data": {
+          "sensor_index": "Sensore"
+        }
+      }
+    },
+    "error": {
+      "invalid_sensor": "Controlla i valori inseriti per il sensore.",
+      "invalid_state_map": "Formato non valido: usa coppie chiave=valore separate da virgole.",
+      "invalid_precision": "Precisione non valida.",
+      "invalid_selection": "Selezione non valida.",
+      "no_sensors": "Nessun sensore configurato."
+    }
+  }
+}

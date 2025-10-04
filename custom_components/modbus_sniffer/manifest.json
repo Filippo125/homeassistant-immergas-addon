@@ -1,0 +1,10 @@
+{
+  "domain": "modbus_sniffer",
+  "name": "Modbus Sniffer",
+  "version": "0.2.0",
+  "documentation": "https://github.com/filippoferrazini",
+  "requirements": [],
+  "codeowners": ["@filippoferrazini"],
+  "iot_class": "local_push",
+  "config_flow": true
+}

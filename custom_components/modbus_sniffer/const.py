@@ -92,6 +92,7 @@ DEFAULT_SENSOR_TEMPLATES_BY_DEVICE = {
             CONF_STATE_MAP: {
                 1: "Raffreddamento",
                 2: "Riscaldamento",
+                7: "Sbrinamento",
                 21: "OFF",
                 22: "Solo circolatore",
             },

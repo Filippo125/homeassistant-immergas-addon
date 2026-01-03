@@ -47,9 +47,11 @@ sensor:
       - name: Stato pompa
         register: 0x003F
         state_map:
-          2: "ON"
+          1: "Raffreddamento"
+          2: "Riscaldamento"
+          7: "Sbrinamento"
           21: "OFF"
-          22: "AVVIO"
+          22: "Solo circolatore"
       - name: Setpoint mandata
         register: 0x0005
         scale: 0.1
@@ -74,7 +76,7 @@ sensor:
 | 4        | `0x0004`  | Temperatura mandata | Scala 0.1°C |
 | 5        | `0x0005`  | Setpoint mandata | Scala 0.1°C |
 | 48       | `0x0030`  | Temperatura impianto calcolata | Scala 0.1°C |
-| 63       | `0x003F`  | Stato impianto | `2=ON`, `21=OFF`, `22=Avvio` |
+| 63       | `0x003F`  | Stato impianto | `1=Raffreddamento`, `2=Riscaldamento`, `7=Sbrinamento`, `21=OFF`, `22=Solo circolatore` |
 Puoi arricchire la tabella aggiornando il file `appunti.md` con nuovi registri e scale rilevate durante l'analisi.
 ## Diagnostica
 - Imposta il logger `custom_components.modbus_sniffer` su livello `debug` per vedere i frame riconosciuti:
